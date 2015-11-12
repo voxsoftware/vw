@@ -31,7 +31,7 @@ fi
 
 ## Copiando los binarios ...
 sudo cp ./vw "$INSTALL_DIR/vw"
-sudo cp /bin/jx /"$INSTALL_DIR/vwdata/jx"
+sudo cp jx /"$INSTALL_DIR/vwdata/jx"
 
 cd "$INSTALL_DIR/vwdata"
 sudo jx install vw-server # instala vw-server 
