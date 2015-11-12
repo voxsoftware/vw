@@ -1,4 +1,6 @@
 #!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 INSTALL_DIR='/bin'
 if [ ! "$1" == "" ];
 then
@@ -31,7 +33,11 @@ fi
 
 ## Copiando los binarios ...
 sudo cp ./vw "$INSTALL_DIR/vw"
-sudo cp /usr/bin/jx /"$INSTALL_DIR/vwdata/jx"
+
+#sudo cp /usr/bin/jx /"$INSTALL_DIR/vwdata/jx"
+# Esto es para copiar el exe jx al directorio establecido ...
+sudo jx "$DIR/install.js" "$INSTALL_DIR"
+
 
 cd "$INSTALL_DIR/vwdata"
 sudo jx install vw-server # instala vw-server 
