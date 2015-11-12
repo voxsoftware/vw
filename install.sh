@@ -34,9 +34,9 @@ fi
 ## Copiando los binarios ...
 sudo cp ./vw "$INSTALL_DIR/vw"
 
-#sudo cp /usr/bin/jx /"$INSTALL_DIR/vwdata/jx"
+sudo cp /usr/local/bin/jx /"$INSTALL_DIR/vwdata/jx"
 # Esto es para copiar el exe jx al directorio establecido ...
-sudo jx "$DIR/install.js" "$INSTALL_DIR"
+#sudo jx "$DIR/install.js" "$INSTALL_DIR"
 
 
 cd "$INSTALL_DIR/vwdata"
